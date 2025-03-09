@@ -1,11 +1,27 @@
+### Get currently signed in user
+GET http://localhost:3000/auth/whoami
+
+
 ### Create a new user
 POST http://localhost:3000/auth/signup
 content-type: application/json
 
 {
-  "email": "asd@glkjdf.com",
-  "password": "alskjdfjklasdf"
+  "email": "test@test.com",
+  "password": "12345"
 }
+
+### Signin
+POST http://localhost:3000/auth/signin
+content-type: application/json
+
+{
+  "email": "test@test.com",
+  "password": "12345"
+}
+
+### Signout
+POST http://localhost:3000/auth/signout
 
 ### Get a user by id
 GET http://localhost:3000/auth/4
