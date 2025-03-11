@@ -1,7 +1,6 @@
 ### Get currently signed in user
 GET http://localhost:3000/auth/whoami
 
-
 ### Create a new user
 POST http://localhost:3000/auth/signup
 content-type: application/json
@@ -28,7 +27,6 @@ GET http://localhost:3000/auth/4
 
 ### Find all users with given email
 GET http://localhost:3000/auth?email=asd@glkjdf.com
-
 
 ### Remove a user by id
 DELETE http://localhost:3000/auth/1
