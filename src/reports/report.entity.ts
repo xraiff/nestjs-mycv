@@ -30,6 +30,7 @@ export class Report {
   @Column()
   mileage: number;
 
+  // User is wrapped in a function, otherwise it wouldn't be defined
   @ManyToOne(() => User, (user) => user.reports)
   user: User;
 }

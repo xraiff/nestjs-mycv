@@ -13,6 +13,9 @@ export class User {
     @Column()
     password: string;
 
+    // Report is wrapped in a function, otherwise it wouldn't be defined
+    // The second argument is a function that is used to map the relationship from report to user.
+    // This indirection is necessary because their might be more than one type of relationship between the two entities.
     @OneToMany(() => Report, report => report.user)
     reports: Report[];
 
