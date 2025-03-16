@@ -31,6 +31,11 @@
 $ npm install
 ```
 
+## Environment setup
+
+### Verify the following Code extensions:
+- REST Client
+
 ## Compile and run the project
 
 ```bash

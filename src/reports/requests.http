@@ -1,12 +1,35 @@
+### Insert a new report
 POST http://localhost:3000/reports
 content-type: application/json
 
 {
-  "make": "toyota",
+  "make": "ford",
   "model": "corolla",
   "year": 1980,
-  "mileage": 100000,
+  "mileage": 5000,
   "lng": 0,
   "lat": 0,
-  "price": 500000
+  "price": 100000
 }
+
+
+### Approve a report
+PATCH http://localhost:3000/reports/8
+content-type: application/json
+
+{
+  "approved": true
+}
+
+
+### unapprove a report
+PATCH http://localhost:3000/reports/7
+content-type: application/json
+
+{
+  "approved": false
+}
+
+
+### Get an estimage for an existing vehicle
+GET http://localhost:3000/reports?make=toyota&model=corolla&lng=0&lat=0&year=1983&mileage=100000
